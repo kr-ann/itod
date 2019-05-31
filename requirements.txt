@@ -4,6 +4,5 @@ pymorphy2
 nltk
 gensim
 sklearn
-codecs
 requests
 bs4

@@ -1,13 +1,15 @@
 # itod
-This repository contains an implementation of a hybrid method for analyzing word senses: based on Word Sense Induction (WSI) results we perform Word Sense Disambiguation (WSD). 
+This repository contains an implementation of a hybrid method for analyzing word senses: basing on results of Word Sense Induction (WSI) we perform Word Sense Disambiguation (WSD). 
 
-Original datasets we use are in the folder '**data**', the folder '**preprocessed**' contains outputs of the notebook 'Preparing datasets', and results of different steps from the notebook "WSI to WSD" are included in the folder '**results**'. **Each folder contains a more detailed description of its content**.
+Original datasets we use are in the folder '**data**', the folder '**preprocessed**' contains outputs of the notebook 'Preparing datasets', and results of different steps from the notebook "WSI to WSD" are included in the folder '**results**'.
+
+**Each folder contains a more detailed description of its content**.
 
 ### WSI vs WSD 
 
-The purpose of WSI is to analyze the corpus and cluster contexts of a target word that have a similar meaning, without knowing how many and which senses the target word has. The senses themselves are not identified, i.e. all contexts of the target word in the identified cluster should have the same sense but we don't know which sense that is.
+The purpose of **WSI** is to analyze the corpus and cluster contexts of a target word that have a similar meaning, without knowing how many and which senses the target word has. The senses themselves are not identified, i.e. all contexts of the target word in the identified cluster should have the same sense but we don't know which sense that is.
 
-In WSD, on the contrary, the senses of the target word are known in advance, and the goal is to identify which sense the target word has in the new given context.
+In **WSD**, on the contrary, the senses of the target word are known in advance, and the goal is to identify which sense the target word has in the new given context.
 
 Our algorithm combines these two tasks: clusters of contexts for potentially ambiguous words are matched automatically with dictionary definitions that are consequently used as cluster labels in WSD.
 
@@ -15,8 +17,8 @@ Our algorithm combines these two tasks: clusters of contexts for potentially amb
 
 The proposed algorithm takes a set of contexts as an input and returns the most suitable dictionary definition. This allows the users to understand which sense the cluster of contexts has, with no need for manual evaluation. As a result, the interpretability of WSI increases.
 
-1. Clusters of contexts for target words are represented as sets of keywords. Under "keywords" we understand context markers, the most important ones for identifying the sense of a target word.
-2. Keywords of each cluster are matched with dictionary definitions of a target word. Here, two approaches are possible:
+**1.** Clusters of contexts for target words are represented as sets of keywords. Under "keywords" we understand context markers, the most important ones for identifying the sense of a target word.
+**2.** Keywords of each cluster are matched with dictionary definitions of a target word. Here, two approaches are possible:
    - Baseline: is based on the overlap of keywords and words in the definition
    - Proposed approach: compares distributional vectors of keywords and definitions. 
  

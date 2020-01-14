@@ -1,7 +1,7 @@
 # itod
 This repository contains an implementation of a hybrid method for analyzing word senses: based on Word Sense Induction (WSI) results we perform Word Sense Disambiguation (WSD). 
 
-Original datasets we use are in the folder 'data', the folder 'preprocessed' contains outputs of the notebook 'Preparing datasets', and results of different steps from the notebook "WSI to WSD" are included in the folder 'results'.
+Original datasets we use are in the folder '**data**', the folder '**preprocessed**' contains outputs of the notebook 'Preparing datasets', and results of different steps from the notebook "WSI to WSD" are included in the folder '**results**'. **Each folder contains a more detailed description of its content**.
 
 ### WSI vs WSD 
 
